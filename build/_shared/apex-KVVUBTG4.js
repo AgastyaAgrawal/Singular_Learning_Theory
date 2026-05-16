@@ -1,1 +1,1 @@
-import{a}from"/SLT-Notes/build/_shared/chunk-YCIV3G6X.js";import"/SLT-Notes/build/_shared/chunk-GALEQFJV.js";import"/SLT-Notes/build/_shared/chunk-OZE3FFNP.js";export default a();
+import{a}from"/Singular_Learning_Theory/build/_shared/chunk-YCIV3G6X.js";import"/Singular_Learning_Theory/build/_shared/chunk-GALEQFJV.js";import"/Singular_Learning_Theory/build/_shared/chunk-OZE3FFNP.js";export default a();

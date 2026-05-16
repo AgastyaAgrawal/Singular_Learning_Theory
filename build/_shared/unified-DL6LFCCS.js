@@ -1,1 +1,1 @@
-import{b as a}from"/SLT-Notes/build/_shared/chunk-7SAO57PG.js";import"/SLT-Notes/build/_shared/chunk-O4VQNZ62.js";import"/SLT-Notes/build/_shared/chunk-OZE3FFNP.js";export{a as unified};
+import{b as a}from"/Singular_Learning_Theory/build/_shared/chunk-7SAO57PG.js";import"/Singular_Learning_Theory/build/_shared/chunk-O4VQNZ62.js";import"/Singular_Learning_Theory/build/_shared/chunk-OZE3FFNP.js";export{a as unified};

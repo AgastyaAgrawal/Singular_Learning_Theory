@@ -1,1 +1,1 @@
-import{c as e}from"/SLT-Notes/build/_shared/chunk-OZE3FFNP.js";var n=e((t,a)=>{a.exports=s;s.displayName="csv";s.aliases=[];function s(c){c.languages.csv={value:/[^\r\n,"]+|"(?:[^"]|"")*"(?!")/,punctuation:/,/}}});export{n as a};
+import{c as e}from"/Singular_Learning_Theory/build/_shared/chunk-OZE3FFNP.js";var n=e((t,a)=>{a.exports=s;s.displayName="csv";s.aliases=[];function s(c){c.languages.csv={value:/[^\r\n,"]+|"(?:[^"]|"")*"(?!")/,punctuation:/,/}}});export{n as a};

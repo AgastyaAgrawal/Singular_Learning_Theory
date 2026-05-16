@@ -1,1 +1,1 @@
-import{a,b,c,d,e}from"/SLT-Notes/build/_shared/chunk-EMLRI2JG.js";import"/SLT-Notes/build/_shared/chunk-6FEZWRIS.js";import"/SLT-Notes/build/_shared/chunk-OZE3FFNP.js";e();export{d as css,b as cssCompletionSource,c as cssLanguage,a as defineCSSCompletionSource};
+import{a,b,c,d,e}from"/Singular_Learning_Theory/build/_shared/chunk-EMLRI2JG.js";import"/Singular_Learning_Theory/build/_shared/chunk-6FEZWRIS.js";import"/Singular_Learning_Theory/build/_shared/chunk-OZE3FFNP.js";e();export{d as css,b as cssCompletionSource,c as cssLanguage,a as defineCSSCompletionSource};

@@ -1,1 +1,1 @@
-import{b as a,c as b,d as c,f as d}from"/SLT-Notes/build/_shared/chunk-GUCIBHGO.js";import"/SLT-Notes/build/_shared/chunk-OZE3FFNP.js";export{a as CONTINUE,b as EXIT,c as SKIP,d as visit};
+import{b as a,c as b,d as c,f as d}from"/Singular_Learning_Theory/build/_shared/chunk-GUCIBHGO.js";import"/Singular_Learning_Theory/build/_shared/chunk-OZE3FFNP.js";export{a as CONTINUE,b as EXIT,c as SKIP,d as visit};
