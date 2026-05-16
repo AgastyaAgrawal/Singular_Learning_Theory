@@ -8,9 +8,6 @@
     <loc>http://localhost:3001/intro-bayesian</loc>
   </url>
   <url>
-    <loc>http://localhost:3001/example-6</loc>
-  </url>
-  <url>
     <loc>http://localhost:3001/exercises1</loc>
   </url>
 </urlset>
