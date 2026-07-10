@@ -1,0 +1,1 @@
+This is a comprehensive set of texts covering Singular Learning Theory. A key feature of the text is that it is more comprehensive than the resources found online and adapted directly from the Watanabe texts with the solutions to the exercises, as well as the many examples and exercises from Suzuki's WAIC and WBIC with Pythan Stan book. 
