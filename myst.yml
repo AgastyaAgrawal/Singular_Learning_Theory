@@ -2,13 +2,14 @@ version: 1
 project:
   title: Singular Learning Theory Notes
   author: Agastya Agrawal
-  github: https://github.com/AgastyaAgrawal/SLT-Notes
+  github: https://github.com/AgastyaAgrawal/Singular_Learning_Theory
+  url: https://agastyaagrawal.github.io/Singular_Learning_Theory/
   toc:
     - file: intro.md
     - title: Introduction to Bayesian Statistics
       children:
         - file: intro_bayesian/intro_bayesian.md
-        - file: Suzuki/Chapter 2/example_6.ipynb
+        - file: Suzuki/Chapter_2/example_6.ipynb
         - file: watanabe_exercises/exercises1.md
 site:
   template: book-theme
