@@ -10,6 +10,10 @@ project:
       children:
         - file: intro_bayesian/intro_bayesian.md
         - file: Suzuki/Chapter_2/example_6.ipynb
+        - file: Suzuki/Chapter_3/Metropolis_Hasting.ipynb
         - file: watanabe_exercises/exercises1.md
+    - title: Basic Bayesian Theory
+      children:
+        - file: bayesian_main/bayesian_main.md
 site:
   template: book-theme
