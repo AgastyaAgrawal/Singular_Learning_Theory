@@ -15,5 +15,8 @@ project:
     - title: Basic Bayesian Theory
       children:
         - file: bayesian_main/bayesian_main.md
+    - title: Analysis of Regular Statistical Models
+      children:
+        - file: regular_posterior/regular_asymptotics.md
 site:
   template: book-theme
