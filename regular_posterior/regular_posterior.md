@@ -65,7 +65,7 @@ $$
 \frac{I_A(n)}{\exp(-nh(w_0))\varphi(w_0)G_n} \to 1
 $$
 
-Let us calculate the integral and be over with it. Actually, to compute the integral, we would actually have to complete the square and then use the Gaussian integral formula, but we are in good luck since $A_1 = 0$, since $w_0$ is the minimum. But still keep the method in mind, it will come in use later. 
+Let us calculate the integral and be over with it. Actually, to compute the integral, we would actually have to complete the square and then use the Gaussian integral formula, but we are in good luck since $A_1 = 0$, since $w_0$ is the minimum. But still keep the method in mind, it will come in **useful** later. 
 
 Thus, we can do a simple change of variable to get
 $$
@@ -138,7 +138,7 @@ $$
 Z_n^{(0)} = \int e^{-nK_n(w)}\varphi(w)dw
 $$
 
-The issue is that we cannot directly Taylor expand this. $h(w) - h(w_0) \geq 0$, but it need not be true $K_n(w) - K_n(w_0) \geq 0$. Hence, something else needs to be done. We need to decompose our function of a distance like function and a fluctuation around that and hope it behaves nicely. But why should we expect that? The fluctuation can have a very weird distribution after all. The central limit theorem comes to the rescue in controlling that, it says that the fluctuation is bounded in large samples. This is the universality principle at rescue, which says that you should expect the fluctuation of $f(X_1, ..., X_n)$ to be bounded if the variables are weakly dependent and $f$ sufficiently smooth. 
+The issue is that we cannot directly Taylor expand this. $h(w) - h(w_0) \geq 0$, but it need not be true $K_n(w) - K_n(w_0) \geq 0$. Hence, something else needs to be done. We need to decompose our function **into a distance-like function** and a fluctuation around that and hope it behaves nicely. But why should we expect that? The fluctuation can have a very weird distribution after all. The central limit theorem comes to the rescue in controlling that, it says that the fluctuation is bounded in large samples. This is the universality principle **to the** rescue, which says that you should expect the fluctuation of $f(X_1, ..., X_n)$ to be bounded if the variables are weakly dependent and $f$ sufficiently smooth. 
 
 So we define the empirical process
 $$
@@ -275,7 +275,7 @@ Using the lower bound $nK_n(w) \geq \frac{1}{2}nK(w) - \frac{1}{2}\Gamma_n^2$, t
 $$
 Z_n^{(2)} \leq e^{\Gamma_n^2/2}\int_B \exp(-\frac{1}{2}nK(w))\varphi(w)dw \leq e^{\Gamma_n^2/2}\exp(-\frac{1}{8}\lambda_{min}n\delta_n^2)\int_B\varphi(w)dw
 $$
-Now, since $\varphi(w)$ is a density function, the integral over $B$ is less than equal to $1$. 
+Now, since $\varphi(w)$ is a density function, the integral over $B$ is **at most** $1$. 
 $$
 Z_n^{(2)} \leq e^{\Gamma_n^2/2}\exp(-\frac{1}{8}\lambda_{min}n\delta_n^2)
 $$
@@ -316,7 +316,7 @@ Let us test out our theory on a regular model.
 
 
 
-Do note one thing: We cannot make a statement about the expectations yet, we need to show Uniform Integrability for that (recall from the probability primer: convergence in distribution/probability + uniform integrability implies covergence in expectation)
+Do note one thing: We cannot make a statement about the expectations yet, we need to show **uniform integrability** for that (recall from the probability primer: convergence in distribution/probability + uniform integrability implies **convergence** in expectation)
 
 ## Asymptotics of the Posterior
 
