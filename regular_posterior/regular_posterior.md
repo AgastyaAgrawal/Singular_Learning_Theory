@@ -252,8 +252,6 @@ There are two issues with the definition above though:
 
 1) In a more general model, $W_0$ is not one point, it is a real analytic set. Hence $f(x, w)$ cannot be treated locally. More precisely, what this means is that the taylor expansion we have been doing does not work directly, since now the hessian is not symmetric positive definite (this is a heuristic argument). So this definition of the process does not really work anymore. Keep this in mind, we will deal with this formally later. 
 
-(Insert a nice image here, maybe do some experiments and show results here. Some geometric visualization is nice here)
-
 2) The second is the fact that the process is not defined at $W_0$ as the denominator is $0$. It may not even be possible to continuously extend our process to $W_0$.
 
 The second issue holds even for our regular model. What is the "resolution" here? The solution is to perform a diffeomorphism of the space, and then extend the function to $w_0$ there. This is the main idea one should keep in mind. We describe the solution formally now. 
@@ -406,7 +404,7 @@ Now, $E_w||u||^3 \leq (E_w||u||^4)^{3/4}$ (By Holder), now since this is a polyn
 $$
 E_w[f(x, w)] = E_w[\Delta]^t \nabla f(x, w_0) + \frac{1}{2}tr(HE_w[\Delta\Delta^t]) + o_p(\frac{1}{n})
 $$
-By usinr our posteriour averaae bounds, 
+By using our posteriour average bounds, 
 
 $$
 E_w[f(X, w)] = \left(\frac{1}{\sqrt{n}}J^{-1/2}\zeta_n\right)^t\nabla f(x, w_0) + \frac{1}{2n}tr(H(J^{-1} + J^{-1/2}\zeta_n\zeta_n^tJ^{-1/2})) + o_p(\frac{1}{n})
