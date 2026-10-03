@@ -178,7 +178,7 @@ $$
 
 Since $a_n \to 0$, $\{X_n\} = O_p(1)$, we have $\{a_nX_n\} = o_p(1)$.
 
-Hence $A_4$ is $o_p(1)$, and similarly, so is $A_5$, **with one caveat: in $A_5$ the point $c$ is random and depends on $w$, so the pointwise central limit theorem is not enough. We need the uniform bound $\sup_{w \in W}\|\nabla^3\xi_n(w)\| = O_p(1)$, which we assume. Then $|A_5| \leq M_5\sqrt{n}\delta_n^3\sup_{w \in W}\|\nabla^3\xi_n(w)\| = o_p(1)$, since $\sqrt{n}\delta_n^3 \to 0$**.
+Hence $A_4$ is $o_p(1)$, and similarly, $A_5$ is similar: in $A_5$ the point $c$ is random and depends on $w$, so the pointwise central limit theorem is not enough. We assume the uniform bound $\sup_{w \in W}\|\nabla^3\xi_n(w)\| = O_p(1)$. Then $|A_5| \leq M_5\sqrt{n}\delta_n^3\sup_{w \in W}\|\nabla^3\xi_n(w)\| = o_p(1)$, since $\sqrt{n}\delta_n^3 \to 0$.
 
 Hence we write
 $$
