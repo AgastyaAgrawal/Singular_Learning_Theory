@@ -20,6 +20,15 @@
     <loc>http://localhost:3000/bayesian-main</loc>
   </url>
   <url>
+    <loc>http://localhost:3000/probability-primer</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/empirical-process-theory</loc>
+  </url>
+  <url>
+    <loc>http://localhost:3000/laplace</loc>
+  </url>
+  <url>
     <loc>http://localhost:3000/regular-asymptotics</loc>
   </url>
 </urlset>
