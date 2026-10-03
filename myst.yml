@@ -24,6 +24,6 @@ project:
 site:
   template: book-theme
   options:
-    logo_text: Singular Learning Theory Notes
+    logo_text: Singular Learning Theory
   parts:
     primary_sidebar_footer: sidebar_footer.md
