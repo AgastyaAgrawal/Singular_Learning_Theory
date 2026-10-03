@@ -181,7 +181,7 @@ $$
 
 Since $a_n \to 0$, $\{X_n\} = O_p(1)$, we have $\{a_nX_n\}$ = $o_p(1)$. 
 
-Hence $A_4$ is $o_p(1)$, and similarly, so is $A_5$.
+Hence $A_4$ is $o_p(1)$, and similarly, so is $A_5$, **with one caveat: in $A_5$ the point $c$ is random and depends on $w$, so the pointwise central limit theorem is not enough. We need the uniform bound $\sup_{w \in W}\|\nabla^3\xi_n(w)\| = O_p(1)$, which we assume. Then $|A_5| \leq M_5\sqrt{n}\delta_n^3\sup_{w \in W}\|\nabla^3\xi_n(w)\| = o_p(1)$, since $\sqrt{n}\delta_n^3 \to 0$**.
 
 Hence we write
 $$
@@ -236,7 +236,7 @@ $$
 
 Claim: $\gamma_n(w) = O_p(1)$
 
-Proof: Since the model is regular, relatively finite variance holds for the log density ratio function: $E_X[f(X, w)^2] \leq c_0 K(w)$ for all $w$. 
+Proof: **We assume that** relatively finite variance holds for the log density ratio function **(this does not follow from regularity alone; it is an extra condition)**: $E_X[f(X, w)^2] \leq c_0 K(w)$ for all $w$. 
 
 Now,
 $$
@@ -247,7 +247,7 @@ Hence,
 $$
 P(|\gamma_n(w)| > t) \leq \frac{c_0}{t^2} \implies \gamma_n(w) = O_p(1)
 $$
-Note that we were able to get this from relatively finite variance, which we got since the model was regular. When we move to the more general case, we will simply need to take this as an assumption, and I am not sure why we should assume this to be true. But it will still be a great improvement. 
+Note that we were able to get this from relatively finite variance, which **we have assumed**. When we move to the more general case, we will **keep** this assumption, and I am not sure why we should assume this to be true. But it will still be a great improvement. 
 
 There are two issues with the definition above though: 
 
@@ -424,6 +424,8 @@ $$
 E_w[f(x, w)] = \left(\frac{1}{\sqrt{n}}J^{-1/2}\zeta_n\right)^t\nabla f(x, w_0) + \frac{1}{2n}tr(H(J^{-1} + J^{-1/2}\zeta_n\zeta_n^tJ^{-1/2})) + o_p(\frac{1}{n})
 $$
 
+**For a single fixed $x$, the error coming from $E_w[\Delta]$ in the first term is only $o_p(1/\sqrt{n})$. It becomes $o_p(1/n)$ once we average over $x$, because $E_X[\nabla f(X, w_0)] = \nabla K(w_0) = 0$ and $\frac{1}{n}\sum_{i = 1}^n\nabla f(X_i, w_0) = O_p(1/\sqrt{n})$. Only these averages enter $G_n$, $T_n$ and $C_n$, so the expansions below are unaffected.**
+
 We also have that 
 $$
 E_w[f(x, w)^2] = E_w[(\Delta^t\nabla f(x, w_0))^2] + o_p(\frac{1}{n})
@@ -447,6 +449,8 @@ $$
 E_X[\nabla^2f(X, w_0)] = J
 $$
 
+**Here $I = E_X[\nabla f(X, w_0)\nabla f(X, w_0)^t]$, and $\frac{1}{n}\sum_{i = 1}^n\nabla f(X_i, w_0)\nabla f(X_i, w_0)^t \to I$ in probability.**
+
 We get the following asymptotes for the losses (it is an exercise to substitute them and check). 
 
 $$
@@ -459,7 +463,19 @@ $$
 C_n = L_n(w_0) + \frac{d - ||\zeta_n||^2 + tr(IJ^{-1})}{2n} + o_p(\frac{1}{n})
 $$
 
-And $W_n$ has the same expansion as $C_n$. 
+And $W_n$ has the same expansion as $C_n$.
+
+**The distribution of $\zeta_n$.** **By the central limit theorem, $b_n = \frac{1}{\sqrt{n}}\sum_{i = 1}^n\nabla f(X_i, w_0)$ converges in distribution to $N(0, I)$ (the mean is $0$ because $\nabla K(w_0) = 0$). Hence $\zeta_n = -J^{-1/2}b_n$ converges in distribution to $N(0, J^{-1/2}IJ^{-1/2})$, and $E\|\zeta_n\|^2 \to \mathrm{tr}(IJ^{-1})$. In the realizable case $I = J$, so $\|\zeta_n\|^2$ is asymptotically $\chi^2_d$.**
+
+**Taking expectations of the expansions above (assuming uniform integrability, see the exercise below), and using $E[L_n(w_0)] = L(w_0)$:**
+$$
+\begin{aligned}
+E[G_n] &= L(w_0) + \frac{d}{2n} + o(\frac{1}{n}) \\
+E[C_n] &= L(w_0) + \frac{d}{2n} + o(\frac{1}{n}) \\
+E[T_n] &= L(w_0) + \frac{d - 2\,\mathrm{tr}(IJ^{-1})}{2n} + o(\frac{1}{n})
+\end{aligned}
+$$
+**So cross-validation (and WAIC) is an asymptotically unbiased estimator of the generalization loss, while the training loss underestimates it by $\mathrm{tr}(IJ^{-1})/n$ on average. This equals $d/n$ only in the realizable case, which is why a fixed correction of $d$ (as in AIC) fails under misspecification.** 
 
 ### Checking the losses on the sine model
 
