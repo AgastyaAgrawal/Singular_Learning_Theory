@@ -65,7 +65,7 @@ $$
 \frac{I_A(n)}{\exp(-nh(w_0))\varphi(w_0)G_n} \to 1
 $$
 
-Let us calculate the integral and be over with it. Actually, to compute the integral, we would actually have to complete the square and then use the Gaussian integral formula, but we are in good luck since $A_1 = 0$, since $w_0$ is the minimum. But still keep the method in mind, it will come in **useful** later. 
+Let us calculate the integral and be over with it. Actually, to compute the integral, we would actually have to complete the square and then use the Gaussian integral formula, but we are in good luck since $A_1 = 0$, since $w_0$ is the minimum. But still keep the method in mind, it will come in useful later. 
 
 Thus, we can do a simple change of variable to get
 $$
@@ -138,7 +138,7 @@ $$
 Z_n^{(0)} = \int e^{-nK_n(w)}\varphi(w)dw
 $$
 
-The issue is that we cannot directly Taylor expand this. $h(w) - h(w_0) \geq 0$, but it need not be true $K_n(w) - K_n(w_0) \geq 0$. Hence, something else needs to be done. We need to decompose our function **into a distance-like function** and a fluctuation around that and hope it behaves nicely. But why should we expect that? The fluctuation can have a very weird distribution after all. The central limit theorem comes to the rescue in controlling that, it says that the fluctuation is bounded in large samples. This is the universality principle **to the** rescue, which says that you should expect the fluctuation of $f(X_1, ..., X_n)$ to be bounded if the variables are weakly dependent and $f$ sufficiently smooth. 
+The issue is that we cannot directly Taylor expand this. $h(w) - h(w_0) \geq 0$, but it need not be true $K_n(w) - K_n(w_0) \geq 0$. Hence, something else needs to be done. We need to decompose our function into a distance-like function and a fluctuation around that and hope it behaves nicely. But why should we expect that? The fluctuation can have a very weird distribution after all. The central limit theorem comes to the rescue in controlling that, it says that the fluctuation is bounded in large samples. This is the universality principle to the rescue, which says that you should expect the fluctuation of $f(X_1, ..., X_n)$ to be bounded if the variables are weakly dependent and $f$ sufficiently smooth. 
 
 So we define the empirical process
 $$
@@ -236,7 +236,7 @@ $$
 
 Claim: $\gamma_n(w) = O_p(1)$
 
-Proof: **We assume that** relatively finite variance holds for the log density ratio function **(this does not follow from regularity alone; it is an extra condition)**: $E_X[f(X, w)^2] \leq c_0 K(w)$ for all $w$. 
+Proof: We assume that relatively finite variance holds for the log density ratio function: $E_X[f(X, w)^2] \leq c_0 K(w)$ for all $w$. 
 
 Now,
 $$
@@ -247,7 +247,7 @@ Hence,
 $$
 P(|\gamma_n(w)| > t) \leq \frac{c_0}{t^2} \implies \gamma_n(w) = O_p(1)
 $$
-Note that we were able to get this from relatively finite variance, which **we have assumed**. When we move to the more general case, we will **keep** this assumption, and I am not sure why we should assume this to be true. But it will still be a great improvement. 
+When we move to the more general case, we will keep this assumption, and I am not sure why we should assume this to be true. But it will still be a great improvement from assuming regularity. 
 
 There are two issues with the definition above though: 
 
@@ -275,7 +275,7 @@ Using the lower bound $nK_n(w) \geq \frac{1}{2}nK(w) - \frac{1}{2}\Gamma_n^2$, t
 $$
 Z_n^{(2)} \leq e^{\Gamma_n^2/2}\int_B \exp(-\frac{1}{2}nK(w))\varphi(w)dw \leq e^{\Gamma_n^2/2}\exp(-\frac{1}{8}\lambda_{min}n\delta_n^2)\int_B\varphi(w)dw
 $$
-Now, since $\varphi(w)$ is a density function, the integral over $B$ is **at most** $1$. 
+Now, since $\varphi(w)$ is a density function, the integral over $B$ is at most $1$. 
 $$
 Z_n^{(2)} \leq e^{\Gamma_n^2/2}\exp(-\frac{1}{8}\lambda_{min}n\delta_n^2)
 $$
@@ -316,7 +316,7 @@ Let us test out our theory on a regular model.
 
 
 
-Do note one thing: We cannot make a statement about the expectations yet, we need to show **uniform integrability** for that (recall from the probability primer: convergence in distribution/probability + uniform integrability implies **convergence** in expectation)
+Do note one thing: We cannot make a statement about the expectations yet, we need to show uniform integrability for that (recall from the probability primer: convergence in distribution/probability + uniform integrability implies convergence in expectation)
 
 ## Asymptotics of the Posterior
 
@@ -424,7 +424,7 @@ $$
 E_w[f(x, w)] = \left(\frac{1}{\sqrt{n}}J^{-1/2}\zeta_n\right)^t\nabla f(x, w_0) + \frac{1}{2n}tr(H(J^{-1} + J^{-1/2}\zeta_n\zeta_n^tJ^{-1/2})) + o_p(\frac{1}{n})
 $$
 
-**For a single fixed $x$, the error coming from $E_w[\Delta]$ in the first term is only $o_p(1/\sqrt{n})$. It becomes $o_p(1/n)$ once we average over $x$, because $E_X[\nabla f(X, w_0)] = \nabla K(w_0) = 0$ and $\frac{1}{n}\sum_{i = 1}^n\nabla f(X_i, w_0) = O_p(1/\sqrt{n})$. Only these averages enter $G_n$, $T_n$ and $C_n$, so the expansions below are unaffected.**
+For a single fixed $x$ the error coming from $E_w[\Delta]$ in the first term is only $o_p(1/\sqrt{n})$. It becomes $o_p(1/n)$ once we average over $x$, because $E_X[\nabla f(X, w_0)] = \nabla K(w_0) = 0$ and $\frac{1}{n}\sum_{i = 1}^n\nabla f(X_i, w_0) = O_p(1/\sqrt{n})$. Only these enter the losses.
 
 We also have that 
 $$
@@ -449,7 +449,7 @@ $$
 E_X[\nabla^2f(X, w_0)] = J
 $$
 
-**Here $I = E_X[\nabla f(X, w_0)\nabla f(X, w_0)^t]$, and $\frac{1}{n}\sum_{i = 1}^n\nabla f(X_i, w_0)\nabla f(X_i, w_0)^t \to I$ in probability.**
+Here $I = E_X[\nabla f(X, w_0)\nabla f(X, w_0)^t]$, and $\frac{1}{n}\sum_{i = 1}^n\nabla f(X_i, w_0)\nabla f(X_i, w_0)^t \to I$ in probability.
 
 We get the following asymptotes for the losses (it is an exercise to substitute them and check). 
 
@@ -465,9 +465,9 @@ $$
 
 And $W_n$ has the same expansion as $C_n$.
 
-**The distribution of $\zeta_n$.** **By the central limit theorem, $b_n = \frac{1}{\sqrt{n}}\sum_{i = 1}^n\nabla f(X_i, w_0)$ converges in distribution to $N(0, I)$ (the mean is $0$ because $\nabla K(w_0) = 0$). Hence $\zeta_n = -J^{-1/2}b_n$ converges in distribution to $N(0, J^{-1/2}IJ^{-1/2})$, and $E\|\zeta_n\|^2 \to \mathrm{tr}(IJ^{-1})$. In the realizable case $I = J$, so $\|\zeta_n\|^2$ is asymptotically $\chi^2_d$.**
+The distribution of $\zeta_n$. By the central limit theorem, $b_n = \frac{1}{\sqrt{n}}\sum_{i = 1}^n\nabla f(X_i, w_0)$ converges in distribution to $N(0, I)$ (the mean is $0$ because $\nabla K(w_0) = 0$). Hence $\zeta_n = -J^{-1/2}b_n$ converges in distribution to $N(0, J^{-1/2}IJ^{-1/2})$, and $E\|\zeta_n\|^2 \to \mathrm{tr}(IJ^{-1})$. In the realizable case $I = J$, so $\|\zeta_n\|^2$ is asymptotically $\chi^2_d$.
 
-**Taking expectations of the expansions above (assuming uniform integrability, see the exercise below), and using $E[L_n(w_0)] = L(w_0)$:**
+Observe that we cannot just take expectations of these random variables to get the asymptotic behavior of the expectations. However, we can do if they also happen to be uniformly integrable (see the probability primer). But since that proof is neither very instructive nor repeated, we are just going to assume that. Hence, $E[L_n(w_0)] = L(w_0)$:
 $$
 \begin{aligned}
 E[G_n] &= L(w_0) + \frac{d}{2n} + o(\frac{1}{n}) \\
@@ -475,7 +475,7 @@ E[C_n] &= L(w_0) + \frac{d}{2n} + o(\frac{1}{n}) \\
 E[T_n] &= L(w_0) + \frac{d - 2\,\mathrm{tr}(IJ^{-1})}{2n} + o(\frac{1}{n})
 \end{aligned}
 $$
-**So cross-validation (and WAIC) is an asymptotically unbiased estimator of the generalization loss, while the training loss underestimates it by $\mathrm{tr}(IJ^{-1})/n$ on average. This equals $d/n$ only in the realizable case, which is why a fixed correction of $d$ (as in AIC) fails under misspecification.** 
+Hence, cross-validation (and WAIC) is an asymptotically unbiased estimator of the generalization loss, while the training loss underestimates it by $\mathrm{tr}(IJ^{-1})/n$ on average. 
 
 ### Checking the losses on the sine model
 
@@ -491,7 +491,6 @@ We now check the non realizable case.  The best parameter is still $w_0 = (0.3, 
 
 *Misspecified case (true noise $\sigma = 1.5$, $\mathrm{tr}(IJ^{-1}) = 4.5$). The predictions still hold. The training loss is now biased by $\mathrm{tr}(IJ^{-1})/n$ rather than $d/n$, so a fixed correction of $d$ (as in AIC) would be wrong, while cross-validation and WAIC pick up the right amount from the data.*
 
-Exercise: I am not going to prove uniform integrability (UI), as the argument does not seem sufficiently instructive and reusable. Assume it and derive the asymptotes of the expectations of the observables.
 
 ## Point Estimators 
 

@@ -17,6 +17,9 @@ project:
         - file: bayesian_main/bayesian_main.md
     - title: Analysis of Regular Statistical Models
       children:
+        - file: primer_probability/probability_primer.md
+        - file: primer_probability/empirical_process_theory.md
+        - file: primer_probability/laplace.md
         - file: regular_posterior/regular_asymptotics.md
 site:
   template: book-theme
