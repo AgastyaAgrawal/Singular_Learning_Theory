@@ -23,3 +23,7 @@ project:
         - file: regular_posterior/regular_asymptotics.md
 site:
   template: book-theme
+  options:
+    logo_text: Singular Learning Theory Notes
+  parts:
+    primary_sidebar_footer: sidebar_footer.md
